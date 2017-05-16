@@ -1,12 +1,20 @@
 <h1>Home Page</h1>
 <p>Welcome to the Home Page! Inset Your Information Below to Send an SMS Message!<p>
 
-<%= form_tag("/sms/send", method: "post") do %>
-<%= label_tag(:address, "Your Email") %>
+<%= form_tag(:controller => "pages", :action => "sms", :method => "get") %>
+<%= label_tag(:address, "Your Email:") %>
+<br>
 <%= email_field(:user, :address) %>
-<%= label_tag(:phone, "Phone Number of Recipient") %>
+<br>
+<br>
+<%= label_tag(:phone, "Phone Number of Recipient:") %>
+<br>
 <%= text_area_tag(:phone, "+1") %>
-<%= label_tag(:body, "Message Body") %>
+<br>
+<br>
+<%= label_tag(:body, "Message Body:") %>
+<br>
 <%= text_area_tag(:body, "Hey there!") %>
+<br>
+<br>
 <%= submit_tag("Send Message") %>
-<% end %>
