@@ -2,8 +2,8 @@
 <p>Welcome to the Home Page! Inset Your Information Below to Send an SMS Message!<p>
 
 <%= form_tag("/sms/send", method: "post") do %>
-<%= label_tag(:email, "Your Email") %>
-<%= email_field(:email, "Valid Email Address") %>
+<%= label_tag(:address, "Your Email") %>
+<%= email_field(:user, :address) %>
 <%= label_tag(:phone, "Phone Number of Recipient") %>
 <%= text_area_tag(:phone, "+1") %>
 <%= label_tag(:body, "Message Body") %>
