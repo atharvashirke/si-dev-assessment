@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def sms
+    require 'figaro'
     require 'twilio-ruby'
 
 # To find these visit https://www.twilio.com/user/account
