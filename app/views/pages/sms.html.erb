@@ -1,21 +1,21 @@
-<h1 style="text-align:center;">Submission Sent!</h1>
-<p style="text-align:center;">Congrats! Your message has been succsessfully sent</p>
+<body style="background-color:rgb(173,224,255);">
+    <h1 style="text-align:center;">Submission Sent!</h1>
+    <p style="text-align:center;">Congrats! Your message has been succsessfully sent</p>
 
-<body style="text-align:center;">
-    Here is some information on the message you sent: 
+    <p2 style="text-align:center;"> Here is some information on the message you sent: </p2>
+
+    <br>
+    <br>
+    
+    <p3>Phone Number of Recipient:</p3>
+    <%= params[:phone] %>
+
+    <br>
+    <br>
+
+    <p4>Message Sent:</p4>
+
+    <br>
+
+    <%= params[:body] %>
 </body>
-
-<br>
-<br>
-
-<p2>Phone Number of Recipient:</p2>
-<%= params[:phone] %>
-
-<br>
-<br>
-
-<p3>Message Sent:</p3>
-
-<br>
-
-<%= params[:body] %>

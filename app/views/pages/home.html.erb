@@ -1,20 +1,22 @@
-<h1 style="text-align:center;">Home Page</h1>
-<p style="text-align:center;">Welcome to the Home Page! Inset Your Information Below to Send an SMS Message!<p>
+<body style="background-color:rgb(173,224,255);">
+    <h1 style="text-align:center;">Home Page</h1>
+    <p style="text-align:center;">Welcome to the Home Page! Inset Your Information Below to Send an SMS Message!<p>
 
-<%= form_tag(:controller => "pages", :action => "sms", :method => "get") %>
-<%= label_tag(:address, "Your Email:") %>
-<br>
-<%= email_field(:user, :address) %>
-<br>
-<br>
-<%= label_tag(:phone, "Phone Number of Recipient:") %>
-<br>
-<%= text_area_tag(:phone, "+1") %>
-<br>
-<br>
-<%= label_tag(:body, "Message Body:") %>
-<br>
-<%= text_area_tag(:body, "Hey there!") %>
-<br>
-<br>
+    <%= form_tag(:controller => "pages", :action => "sms", :method => "get") %>
+    <%= label_tag(:address, "Your Email:") %>
+        <br>
+    <%= email_field(:user, :address) %>
+        <br>
+        <br>
+    <%= label_tag(:phone, "Phone Number of Recipient:") %>
+        <br>
+    <%= text_area_tag(:phone, "+1") %>
+        <br>
+        <br>
+    <%= label_tag(:body, "Message Body:") %>
+        <br>
+    <%= text_area_tag(:body, "Hey there!") %>
+        <br>
+        <br>
 <%= submit_tag("Send Message") %>
+</body>
